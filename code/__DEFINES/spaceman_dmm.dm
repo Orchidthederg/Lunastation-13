@@ -29,6 +29,8 @@
 #endif
 
 /world/proc/enable_debugger()
-    var/dll = world.GetConfig("env", "EXTOOLS_DLL")
-    if (dll)
-        call(dll, "debug_initialize")()
+	var/port = world.GetConfig("env", "EXTOOLS_PORT") || "59449"
+	var/dll = world.GetConfig("env", "EXTOOLS_DLL")
+	dll = "C:/Users/caden/.vscode/extensions/platymuus.dm-langclient-0.1.9/bin/extools0.dll"
+	if (dll)
+		call(dll, "debug_initialize")("BLOCK", port)
