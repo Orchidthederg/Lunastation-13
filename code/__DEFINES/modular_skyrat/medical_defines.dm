@@ -139,6 +139,7 @@
 #define ALIEN_BODYPARTS_PATH list(/obj/item/bodypart/chest/alien, /obj/item/bodypart/groin/alien, /obj/item/bodypart/head/alien, /obj/item/bodypart/l_arm/alien, /obj/item/bodypart/l_hand/alien, /obj/item/bodypart/r_arm/alien, /obj/item/bodypart/r_hand/alien, /obj/item/bodypart/r_leg/alien, /obj/item/bodypart/r_foot/alien, /obj/item/bodypart/l_leg/alien, /obj/item/bodypart/l_foot/alien)
 #define BODYPARTS_PATH list(/obj/item/bodypart/chest, /obj/item/bodypart/groin, /obj/item/bodypart/head, /obj/item/bodypart/l_arm, /obj/item/bodypart/l_hand, /obj/item/bodypart/r_arm, /obj/item/bodypart/r_hand,/obj/item/bodypart/l_leg, /obj/item/bodypart/l_foot, /obj/item/bodypart/r_leg, /obj/item/bodypart/r_foot)
 #define MONKEY_BODYPARTS_PATH list(/obj/item/bodypart/head/monkey, /obj/item/bodypart/chest/monkey, /obj/item/bodypart/groin/monkey, /obj/item/bodypart/l_arm/monkey, /obj/item/bodypart/l_hand/monkey, /obj/item/bodypart/r_arm/monkey, /obj/item/bodypart/r_hand/monkey, /obj/item/bodypart/l_leg/monkey, /obj/item/bodypart/l_foot/monkey, /obj/item/bodypart/r_leg/monkey, /obj/item/bodypart/r_foot/monkey)
+#define KOBOLD_BODYPARTS_PATH list(/obj/item/bodypart/chest/kobold, /obj/item/bodypart/head/kobold, /obj/item/bodypart/l_arm/kobold, /obj/item/bodypart/r_arm/kobold, /obj/item/bodypart/r_leg/kobold, /obj/item/bodypart/l_leg/kobold)
 #define LARVA_BODYPARTS_PATH list(/obj/item/bodypart/chest/larva, /obj/item/bodypart/head/larva)
 
 //Defines related to apparent consciousness, when you examine someone

@@ -1,27 +1,32 @@
+
+
 /mob/living/carbon/kobold
 
-
-/mob/living/carbon/kobold/Life()
-	set invisibility = 0
-
-	if (notransform)
+/mob/living/carbon/kobold/BiologicalLife(seconds, times_fired)
+	if(!(. = ..()))
 		return
+	if(client)
+		return
+	if(stat == CONSCIOUS)
+		if(on_fire || buckled || restrained() || (!CHECK_MOBILITY(src, MOBILITY_STAND) && CHECK_MOBILITY(src, MOBILITY_MOVE))) //CIT CHANGE - makes it so monkeys attempt to resist if they're resting)
+			if(!resisting && prob(MONKEY_RESIST_PROB))
+				resisting = TRUE
+				walk_to(src,0)
+				resist()
+		else if(resisting)
+			resisting = FALSE
+		else if((mode == MONKEY_IDLE && !pickupTarget && !prob(MONKEY_SHENANIGAN_PROB)) || !handle_combat())
+			if(prob(25) && CHECK_MOBILITY(src, MOBILITY_MOVE) && isturf(loc) && !pulledby)
+				step(src, pick(GLOB.cardinals))
+			else if(prob(1))
+				emote(pick("scratch","jump","roll","tail"))
+	else
+		walk_to(src,0)
 
-	if(..() && !IsInStasis())
-
-		if(!client)
-			if(stat == CONSCIOUS)
-				if(on_fire || buckled || restrained() || (resting && canmove)) //CIT CHANGE - makes it so monkeys attempt to resist if they're resting)
-					if(!resisting && prob(MONKEY_RESIST_PROB))
-						resisting = TRUE
-						walk_to(src,0)
-						resist()
-				else if(resisting)
-					resisting = FALSE
-	. = ..()
 
 /mob/living/carbon/kobold/proc/get_cold_protection()
-	
+
+/mob/living/carbon/kobold/proc/get_thermal_protection()
 
 /mob/living/carbon/kobold/handle_environment(datum/gas_mixture/environment)
 	if(!environment)

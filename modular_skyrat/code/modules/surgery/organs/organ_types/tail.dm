@@ -10,5 +10,5 @@
 
 /obj/item/organ/tail/Remove(special = FALSE)
 	if(owner?.dna?.species)
-		owner.dna.species.stop_wagging_tail(owner)
+		owner.dna.species.stop_wagging_tail(owner) //I WAG IN DEATH
 	return ..()

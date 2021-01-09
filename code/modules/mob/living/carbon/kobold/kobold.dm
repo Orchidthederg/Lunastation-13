@@ -2,9 +2,9 @@
 	name = "kobold"
 	desc = "A cute anthro lizard. Very small."
 	icon = 'icons/mob/kobold_parts_greyscale.dmi'
-	icon_state = ""
+	icon_state = "alive"
 	verb_say = list("hisses")
-	initial_language_holder = /datum/language_holder/kobold
+	initial_language_holder = /datum/language/draconic
 	gender = NEUTER
 	health = 40
 	maxHealth = 40
@@ -16,8 +16,7 @@
 	type_of_meat = /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/lizard
 	gib_type = /obj/effect/decal/cleanable/blood/gibs
 	ventcrawler = VENTCRAWLER_NUDE
-	bodyparts = list(/obj/item/bodypart/chest/kobold, /obj/item/bodypart/head/kobold, /obj/item/bodypart/l_arm/kobold,
-					 /obj/item/bodypart/r_arm/kobold, /obj/item/bodypart/r_leg/kobold, /obj/item/bodypart/l_leg/kobold)
+	bodyparts = KOBOLD_BODYPARTS_PATH
 
 	density = FALSE
 	pass_flags = PASSTABLE | PASSMOB
@@ -41,7 +40,7 @@
 	create_dna(src)
 
 /mob/living/carbon/kobold/Initialize()
-		//initialize limbs//
+			//initialize limbs//
 	create_bodyparts() //makes sure our little lizard has a body
 	create_internal_organs() //might need those too
 	. = ..()

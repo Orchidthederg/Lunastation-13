@@ -57,6 +57,7 @@
 //
 
 #define MONKEY_BODYPART "monkey"
+#define KOBOLD_BODYPART "kobold"
 #define ALIEN_BODYPART "alien"
 #define LARVA_BODYPART "larva"
 #define DEVIL_BODYPART "devil"
