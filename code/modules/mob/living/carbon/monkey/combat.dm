@@ -1,4 +1,4 @@
-#define MAX_RANGE_FIND 32
+#define MAX_RANGE_FIND_M 32
 
 /mob/living/carbon/monkey
 	var/aggressive=0 // set to 1 using VV for an angry monkey
@@ -30,7 +30,7 @@
 		return 0
 
 	if(myPath.len <= 0)
-		myPath = get_path_to(src, get_turf(target), /turf/proc/Distance, MAX_RANGE_FIND + 1, 250,1)
+		myPath = get_path_to(src, get_turf(target), /turf/proc/Distance, MAX_RANGE_FIND_M + 1, 250,1)
 
 	if(myPath)
 		if(myPath.len > 0)
@@ -428,4 +428,4 @@
 			retaliate(pulledby)
 			return TRUE
 
-#undef MAX_RANGE_FIND
+#undef MAX_RANGE_FIND_M

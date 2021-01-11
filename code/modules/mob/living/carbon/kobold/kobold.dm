@@ -2,7 +2,7 @@
 	name = "kobold"
 	desc = "A cute anthro lizard. Very small."
 	icon = 'icons/mob/kobold_parts_greyscale.dmi'
-	icon_state = "alive"
+	icon_state = "kobold_alive"
 	verb_say = list("hisses")
 	initial_language_holder = /datum/language/draconic
 	gender = NEUTER

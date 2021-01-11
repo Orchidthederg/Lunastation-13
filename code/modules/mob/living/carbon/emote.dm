@@ -25,6 +25,15 @@
 	mob_type_allowed_typecache = list(/mob/living/carbon, /mob/living/silicon/pai)
 	var/list/clap = list('sound/misc/clap2.ogg', 'sound/misc/clap3.ogg')
 
+/datum/emote/living/carbon/yap
+	key = "yap"
+	key_third_person = "yaps"
+	message = "yaps!"
+	muzzle_ignore = TRUE
+	restraint_check = FALSE
+	emote_type = EMOTE_AUDIBLE
+	mob_type_allowed_typecache = list(/mob/living/carbon/kobold)
+	var/list/yap = list('sound/voice/merp.ogg')
 
 /datum/emote/living/carbon/clap/run_emote(mob/living/user, params)
 	. = ..()
